@@ -68,3 +68,6 @@
     .btn-primary{
       background-color: #563d7b !important
     }
+    #infoBar{
+      display:none
+    }

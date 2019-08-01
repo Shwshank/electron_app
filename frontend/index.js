@@ -71,6 +71,14 @@ function load () {
 		}
 	}
 
+	function displayMsg(msg) {
+		document.getElementById('infoText').innerHTML = msg
+		document.getElementById('infoBar').style="display:block";
+		setTimeout(function(){
+			document.getElementById('infoBar').style="display:none";
+		}, 2000);
+	}
+
 	function clearText() {
 		document.getElementById('email1').value = ""
 		document.getElementById('name1').value = ""
