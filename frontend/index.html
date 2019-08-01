@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Electron App</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js" ></script>
+
+		<link rel="stylesheet" type="text/css" href="./style.css">
+
+		<script src="./index.js"></script>
+		<script type="text/javascript"src="./api.js"></script>
+
+	</head>
+
+
+	<body style=""  onload="load()">
+
+    <nav class="navbar navbar-light bg-light" style="box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+      </a>
+
+    </nav>
+
+		<div class="outer" id="outer">
+
+			<div class="boxx" id="login">
+
+				<form method="POST" action="">
+
+					<label for="email">Email ID&nbsp;&nbsp;&nbsp;</label>
+					<input  type="email" class="box" name="email" id="email" value=""placeholder="Email ID" onkeyup="validation()" ><br>
+					<p style="color:red;" id="error"><br><br><br></p>
+
+					<label for="password">Password&nbsp;&nbsp;&nbsp;</label>
+					<input type="text"  class="box" name="password" id="password" value=""placeholder="Password"><br><br><br>
+
+
+          <button class="btn btn-primary" type="button" onclick="register()">Register</button>
+
+					<button class="btn btn-primary" type="button" onclick="loginAUser()">Login</button>
+				</form>
+			</div>
+
+
+			<div class="boxx" id="register">
+
+
+        <label for="email1">Email Name&nbsp;&nbsp;&nbsp;</label>
+        <input class="box" type="text" name="email1" id="email1" value="" placeholder="Email ID"><br><br><br>
+
+				<label  for="name1">Name&nbsp;&nbsp;&nbsp;</label>
+				<input class="box" type="text" name="name1" id="name1" value="" placeholder=" Name"><br><br><br>
+
+
+				<label for="password1">Password&nbsp;&nbsp;&nbsp;</label>
+				<input class="box" type="text" name="password1" id="password1" value=""placeholder="Password"><br><br><br>
+
+				<button class="btn btn-primary" type="button" onclick="login()">Login</button>
+
+				<button class="btn btn-primary" type="button" onclick="submit()">Submit</button>
+
+			</div>
+
+
+		</div>
+
+	</body>
+
+</html>
