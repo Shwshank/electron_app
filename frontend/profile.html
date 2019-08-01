@@ -11,7 +11,7 @@
 	</head>
 
 
-	<body style=""  onload="load()">
+	<body style=""  onload="checkLogin()">
 
     <nav class="navbar navbar-light bg-light" style="box-shadow: 10px 8px 16px 0px rgba(0, 0, 0, 0.5);">
       <a class="navbar-brand" href="index.html">
@@ -19,7 +19,7 @@
         Bootstrap
       </a>
       <form class="form-inline">
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="logout()">Logout</button>
       </form>
     </nav>
 
@@ -27,11 +27,11 @@
 
 			<div class="boxx" id="login">
 
-        <h3>Welcome User!</h3>
+        <h3>Welcome <span id="wUserName"></span>!</h3>
 
         <br><br>
 
-        <h4>emailid@someemail.com</h4>
+        <h4 id="wUserEmail"></h4>
 
 			</div>
 

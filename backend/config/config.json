@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "port": 3306,
+    "dbURI":"mongodb://127.0.0.1/",
+    "dbName": "node_test_db"
+}

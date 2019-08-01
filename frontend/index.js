@@ -1,8 +1,8 @@
-function load () {
+function load(){
 		document.getElementById('register').style="display:none;";
 
 	}
-	function register () {
+	function register(){
 		document.getElementById('register').style="height:100%;";
 		document.getElementById('login').style="display:none";
 
@@ -22,7 +22,7 @@ function load () {
 		let result = registerUser(data)
 	}
 
-	function loginAUser (){
+	function loginAUser(){
 		let email = document.getElementById('email').value
 		let password = document.getElementById('password').value
 
@@ -35,12 +35,13 @@ function load () {
 
 	}
 
-	function login () {
+	function login(){
 		document.getElementById('register').style="display:none;";
 		document.getElementById('login').style="display:block;";
 
 	}
-	function check () {
+
+	function check(){
 
 		var che= document.getElementById('check').value;
 		if(che=="Login")
@@ -53,8 +54,8 @@ function load () {
 			document.getElementById('register').style="height:100%;";
 			document.getElementById('login').style="display:none";
 		}
-
 	}
+
 	function validation()
 	{
 
@@ -71,7 +72,7 @@ function load () {
 		}
 	}
 
-	function displayMsg(msg) {
+	function displayMsg(msg){
 		document.getElementById('infoText').innerHTML = msg
 		document.getElementById('infoBar').style="display:block";
 		setTimeout(function(){
@@ -79,10 +80,29 @@ function load () {
 		}, 2000);
 	}
 
-	function clearText() {
+	function clearText(){
 		document.getElementById('email1').value = ""
 		document.getElementById('name1').value = ""
 		document.getElementById('password1').value = ""
 		document.getElementById('email').value = ""
 		document.getElementById('password').value = ""
+	}
+
+	function checkLogin(){
+
+		let name = localStorage.getItem("name")
+		let email = localStorage.getItem("email")
+
+		if(name && email) {
+			document.getElementById('wUserName').innerHTML = name
+			document.getElementById('wUserEmail').innerHTML = email
+		} else {
+			window.location.replace('./index.html');
+		}
+	}
+
+	function logout(){
+		localStorage.clear()
+		window.location.replace('./index.html');
+		displayMsg("User logged out")
 	}

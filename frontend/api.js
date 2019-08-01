@@ -35,6 +35,11 @@ function loginUser(data) {
 
     if(response.data.msg.result) {
       msg = "Login"
+
+      localStorage.setItem("name", ""+response.data.msg.name)
+      localStorage.setItem("email", ""+response.data.msg.email)
+      window.location.replace('./profile.html');
+
     }
     else {
       if(!response.data.msg.exists){
@@ -44,11 +49,9 @@ function loginUser(data) {
         } else {
           msg = "User dosen't exists"
         }
-
       }
     }
     displayMsg(msg)
-    // alert(msg)
 
   })
   .catch(function (error) {
